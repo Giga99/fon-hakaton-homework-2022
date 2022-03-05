@@ -24,14 +24,15 @@
     <div id="input-fields">
         <label for="depth">
             Unesite dubinu do koje ce se iscrtavati trouglovi:
-            <input type="number" id="depth" name="depth" placeholder="Dubina">
+            <input type="number" min="1" step="1" id="depth" name="depth" placeholder="Dubina">
         </label> <br/>
 
         <button type="button" class="button" id="drawButton">Iscrtaj</button>
+        <button type="button" class="button" id="eraseButton">Izbrisi</button>
     </div>
 
     <div id="triangles">
-        <canvas id="triangles-canvas"></canvas>
+        <canvas width="1000" height="500" id="triangles-canvas"></canvas>
     </div>
 
 </body>
