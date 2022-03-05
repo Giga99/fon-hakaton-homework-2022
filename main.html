@@ -9,13 +9,14 @@
 <!-- end of CSS files -->
 
 <!-- JS files -->
-<script src="js/main.js"></script>
+<!-- defer here means that script loads after html document is loaded -->
+<script src="js/main.js" defer></script>
 <!-- end of JS files -->
 
 <title>Fon Hakaton 2022</title>
 
 <body>
-    
+
     <header>
         <h3>Dobrodosli na sajt za iscrtvanje Sierpiński trougla!</h1>
     </header>
@@ -24,11 +25,13 @@
         <label for="depth">
             Unesite dubinu do koje ce se iscrtavati trouglovi:
             <input type="number" id="depth" name="depth" placeholder="Dubina">
-        </label>
+        </label> <br/>
+
+        <button type="button" class="button" id="drawButton">Iscrtaj</button>
     </div>
 
     <div id="triangles">
-        <canvas></canvas>
+        <canvas id="triangles-canvas"></canvas>
     </div>
 
 </body>
