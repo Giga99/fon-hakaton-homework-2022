@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
 <!-- CSS files -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="css/main.css">
 <!-- end of CSS files -->
 
 <!-- JS files -->
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 <!-- end of JS files -->
 
 <title>Fon Hakaton 2022</title>
 
 <body>
     
-    
+    <header>
+        <h3>Dobrodosli na sajt za iscrtvanje Sierpiński trougla!</h1>
+    </header>
+
+    <div id="input-fields">
+        <label for="depth">
+            Unesite dubinu do koje ce se iscrtavati trouglovi:
+            <input type="number" id="depth" name="depth" placeholder="Dubina">
+        </label>
+    </div>
+
+    <div id="triangles">
+        <canvas></canvas>
+    </div>
 
 </body>
 
