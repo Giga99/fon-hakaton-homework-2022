@@ -1,10 +1,10 @@
 const canvas = document.getElementById('triangles-canvas');
-var ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d");
 const drawButton = document.getElementById("drawButton");
 const eraseButton = document.getElementById("eraseButton");
 
 drawButton.addEventListener("click", function() {
-    const depth = parseInt(document.getElementById("depth").value);
+    var depth = parseInt(document.getElementById("depth").value);
     console.log("DUBINA: " + depth);
     if (depth == null) {
         alert("Unesite dubinu do koje ce se crtati!");
@@ -29,11 +29,10 @@ function classicSierpinski(X, Y, width, height, depth) {
         classicSierpinski(X + width/2, Y + height/2, width/2, height/2, depth-1)
         classicSierpinski(X + width/4, Y, width/2, height/2, depth-1)
     }
-
-    
 }
 
 function drawLine(fromX, fromY, toX, toY) {
+    ctx.beginPath();
     ctx.moveTo(fromX, fromY);
     ctx.lineTo(toX, toY);
     ctx.stroke();
