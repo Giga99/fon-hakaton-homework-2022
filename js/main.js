@@ -1,9 +1,15 @@
 const btn = document.getElementById("drawButton");
 btn.addEventListener("click", function() {
-    sierpinski();
+    const depth = document.getElementById("depth").value;
+    console.log("DUBINA: " + depth);
+    if (depth == null) {
+        alert("Unesite dubinu do koje ce se crtati!");
+    } else {
+        sierpinski(depth);
+    }
 });
 
-function sierpinski() {
+function sierpinski(depth) {
     drawLine(0, 0, 200, 100);
 }
 
