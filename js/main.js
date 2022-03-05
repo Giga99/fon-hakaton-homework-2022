@@ -6,13 +6,12 @@ const eraseButton = document.getElementById("eraseButton");
 drawButton.addEventListener("click", function() {
     var depth = parseInt(document.getElementById("depth").value);
     var constrType = document.getElementById("constrType").value
-    console.log("DUBINA: " + depth);
-    console.log("NACIN ISCRTAVANJA: " + constrType);
+
     if (isNaN(depth)) alert("Unesite dubinu do koje ce se crtati!");
     else if (depth <= 0) alert("Dubina mora biti veca od nule!");
     else if (depth > 13) alert("Dubina je prevelika za iscrtavanje u realnom vremenu!");
     else {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        clearScreen();
         if (constrType == "classic") classicSierpinski(5, 5, canvas.width - 10, canvas.height - 10, depth);
         else if (constrType == "erase") eraseSierpinski(5, 5, canvas.width - 10, canvas.height - 10, depth);
         else if (constrType == "arrowhead") arrowheadSierpinski(5, 5, canvas.width - 10, canvas.height - 10, 0, depth);
@@ -20,7 +19,7 @@ drawButton.addEventListener("click", function() {
 });
 
 eraseButton.addEventListener("click", function() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    clearScreen();
 });
 
 function classicSierpinski(X, Y, width, height, depth) {
@@ -91,4 +90,8 @@ function fillTriangle(X, Y, width, height, inverse) {
         ctx.fill();
     }
 
+}
+
+function clearScreen() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
