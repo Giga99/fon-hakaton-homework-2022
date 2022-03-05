@@ -24,11 +24,20 @@
     <div id="input-fields">
         <label for="depth">
             Unesite dubinu do koje ce se iscrtavati trouglovi:
-            <input type="number" min="1" step="1" id="depth" name="depth" placeholder="Dubina">
+            <input type="number" min="1" step="1" max="13" id="depth" name="depth" placeholder="Dubina">
+        </label> <br/>
+        <label for="constrType">
+            Odaberite nacin na koji ce se iscrtavati trouglovi:
+            <select id="constrType">
+                <option value="classic">Klasicno</option>
+                <option value="erase">Brisanjem</option>
+                <option value="chaos">Haos Igra</option>
+                <option value="arrowhead">Vrh Strele</option>
+              </select>
         </label> <br/>
 
         <button type="button" class="button" id="drawButton">Iscrtaj</button>
-        <button type="button" class="button" id="eraseButton">Izbrisi</button>
+        <button type="button" class="button eraseButton" id="eraseButton">Izbrisi</button>
     </div>
 
     <div id="triangles">

@@ -32,7 +32,14 @@ header {
 
 .button:hover {
     background-color: #969696;
-    color: white;
+}
+
+.eraseButton {
+    background-color: #6e0000;
+}
+
+.eraseButton:hover {
+    background-color: #c53737;
 }
 
 #triangles {
