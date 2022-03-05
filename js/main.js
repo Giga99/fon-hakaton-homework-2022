@@ -1,13 +1,16 @@
 const btn = document.getElementById("drawButton");
 btn.addEventListener("click", function() {
-    iscrtaj();
+    sierpinski();
 });
 
-function iscrtaj() {
-    console.log("ISCRTAJ");
+function sierpinski() {
+    drawLine(0, 0, 200, 100);
+}
+
+function drawLine(fromX, fromY, toX, toY) {
     var c = document.getElementById("triangles-canvas");
     var ctx = c.getContext("2d");
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 100);
+    ctx.moveTo(fromX, fromY);
+    ctx.lineTo(toX, toY);
     ctx.stroke();
 }
