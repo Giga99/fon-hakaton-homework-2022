@@ -12,6 +12,7 @@ drawButton.addEventListener("click", function() {
     else if (depth <= 0) alert("Dubina mora biti veca od nule!");
     else if (depth > 13) alert("Dubina je prevelika za iscrtavanje u realnom vremenu!");
     else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         if (constrType == "classic") classicSierpinski(5, 5, canvas.width - 10, canvas.height - 10, depth);
         else if (constrType == "erase") eraseSierpinski(5, 5, canvas.width - 10, canvas.height - 10, depth);
         else if (constrType == "arrowhead") arrowheadSierpinski(5, 5, canvas.width - 10, canvas.height - 10, 0, depth);
