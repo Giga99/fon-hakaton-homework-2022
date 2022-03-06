@@ -5,7 +5,7 @@ const eraseButton = document.getElementById("eraseButton");
 
 drawButton.addEventListener("click", function() {
     var depth = parseInt(document.getElementById("depth").value);
-    var constrType = document.getElementById("constrType").value
+    var constrType = document.getElementById("constrType").value;
 
     if (isNaN(depth)) alert("Unesite dubinu do koje ce se crtati!");
     else if (depth <= 0) alert("Dubina mora biti veca od nule!");
@@ -67,6 +67,8 @@ function arrowheadSierpinski(X, Y, width, height, angle, depth) {
 }
 
 function drawLine(fromX, fromY, toX, toY) {
+    var color = document.getElementById("color").value;
+    ctx.strokeStyle = color;
     ctx.beginPath();
     ctx.moveTo(fromX, fromY);
     ctx.lineTo(toX, toY);
@@ -82,7 +84,8 @@ function fillTriangle(X, Y, width, height, inverse) {
         ctx.lineTo(X + width, Y);
         ctx.fill();
     } else {
-        ctx.fillStyle = 'black';
+        var color = document.getElementById("color").value;
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.moveTo(X + width / 2, Y);
         ctx.lineTo(X, Y + height);

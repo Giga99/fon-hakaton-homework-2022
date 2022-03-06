@@ -18,13 +18,13 @@
 <body>
 
     <header>
-        <h3>Dobrodosli na sajt za iscrtvanje Sierpiński trougla!</h1>
+        <h2>Dobrodosli na sajt za iscrtvanje Sierpiński trougla!</h1>
     </header>
 
     <div id="input-fields">
         <label for="depth">
             Unesite dubinu do koje ce se iscrtavati trouglovi:
-            <input type="number" min="1" step="1" max="13" id="depth" name="depth" placeholder="Dubina">
+            <input type="number" style="width: 6em" min="1" step="1" max="13" id="depth" name="depth" placeholder="Dubina">
         </label> <br/>
         <label for="constrType">
             Odaberite nacin na koji ce se iscrtavati trouglovi:
@@ -33,6 +33,10 @@
                 <option value="erase">Brisanjem</option>
                 <option value="arrowhead">Vrh Strele</option>
               </select>
+        </label> <br/>
+        <label for="color">
+            Odaberite boju za krugove:
+            <input type="color" id="color" value="#000000">
         </label> <br/>
 
         <button type="button" class="button" id="drawButton">Iscrtaj</button>
